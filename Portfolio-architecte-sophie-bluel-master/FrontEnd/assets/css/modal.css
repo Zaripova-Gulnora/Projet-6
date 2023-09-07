@@ -1,0 +1,233 @@
+.modal{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888; 
+    width: 100%;
+    max-width: 630px;
+    max-height: 731px;
+    overflow-y: auto;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header{
+    width: 100%;
+}
+
+.modal-header .modal-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .modal-actions i .modal-close{
+    cursor : pointer;  
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.modal.show{
+    display: flex;
+}
+
+.modal-title{
+	font-family: 'work sans';
+	font-weight: 400;
+	font-size: 26px;
+	color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 45px 0 ;
+}
+
+.image-modal{
+    position: relative;
+}
+
+.image-modal .poubelle{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #000;
+    padding: 4px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    top: 6px;
+    right: 6px;
+}
+
+.image-modal .fa-trash-can{
+    color: #FFFFFF;
+    font-size: 9px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.modal-main{
+    margin: 0 20%;
+    border-bottom: 1px solid #B3B3B3;
+}
+
+.edit-photo {
+	max-width: 420px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+    margin-bottom: 50px;
+}
+
+
+.edit-photo img {
+	width: 100%;
+}
+
+.modal-footer{
+    margin-top:40px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-footer .button-add{
+    background-color: #1D6154;
+    border-radius: 60px;
+    width: 237px;
+    height: 36px ;
+    line-height: 36px;
+    margin-bottom: 23px;
+}
+
+.modal-footer .button-add span{
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fefefe;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-bg-green{
+    background-color: #1D6154 !important;
+}
+
+.modal-footer #button-validation{
+    border: 0;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fefefe;
+}
+
+.modal-footer .remove-galery{
+    color: red;
+}
+
+#modal-add .modal-main .photo-encart{
+    width: 420px;
+    height: 170px;
+    max-width: 100%;
+    border-radius: 3px;
+    background-color: #E8F1F6;
+    margin-bottom: 30px;
+}
+
+#modal-add .modal-main .photo-encart .content-photo-encart{
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#modal-add .modal-main .photo-encart .content-photo-encart > div {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#modal-add .modal-main .photo-encart .content-photo-encart img:not(.img-select){
+    margin-bottom: 15px;
+}
+
+#modal-add .modal-main .photo-encart .content-photo-encart .button-add{
+    height: 36px;
+    min-width: 173px;
+    margin-bottom: 7px;
+    background-color: #CBD6DC;
+    color: #306685;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+#modal-add .modal-main .photo-encart .content-photo-encart span{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+#modal-add .modal-main .modal-form #addPhoto_form .formulaire{
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-add .modal-main .modal-form #addPhoto_form .formulaire label{
+    margin-bottom: 10px;
+}
+
+#modal-add .modal-main .modal-form #addPhoto_form .formulaire input{
+    margin-bottom: 21px;
+    padding-left: 16px;
+
+    height: 51px;
+    max-width: 420px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+#modal-add .modal-main .modal-form #addPhoto_form .formulaire select{
+    height: 51px;
+    max-width: 420px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+
+    margin-bottom: 50px;
+    padding-left: 16px;
+}
+
+#modal-add .modal-footer .button-add{
+    background-color: #A7A7A7;
+}
+
+#modal-add .img-select{
+    height: 100%;
+}

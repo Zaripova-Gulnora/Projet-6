@@ -1,0 +1,61 @@
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+    
+    background-color:#FFFEF8;
+}
+
+h1 span{
+    margin-bottom: 150px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+}
+
+form div.connexion input{
+    width: 175px;
+    height: 36px;
+
+    border: none;
+    margin-top:2px ;
+}
+
+form div.formulaire label{
+    color: #3D3D3D;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+form div.formulaire input{
+    height: 51px;
+    width: 379px;
+
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+footer{
+    background-color: #FFFFFF;
+    margin-top: 234px;
+    display: flex;
+    justify-content: end;
+}

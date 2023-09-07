@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/modal.css">
+</head>
+<body>
+<div class="banniere d-block-log"> 
+	<div class="mode-edition">
+		<i class="fa-regular fa-pen-to-square"></i>
+		<span>Mode édition</span>
+	</div>
+	<div class="publication-change">
+		<span> publier les changements </span>
+	</div>
+</div>
+<header>
+	<a class="title" href="index.html">Sophie Bluel <span>Architecte d'intérieur</span></a>
+	<nav>
+		<ul>
+			<li><a href="#portfolio">projets</a></li>
+			<li><a href="#contact"> contact</a></li>
+			<li id="logout" class="d-block-log">logout</li>
+			<li id="login" class="d-none-log"><a href="login.html">login</a></li>
+			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+		</figure>
+
+		<article>
+			<div class="edit-texte d-block-log">
+				<i class="fa-regular fa-pen-to-square"></i>
+				<span>modifier</span>
+			</div>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+	<section id="portfolio">
+		<div class="project"> 
+			<h2>Mes Projets</h2>
+			<div id="edit-modal"  class="d-block-log" data-target="#modal-galery" data-toggle="modal">
+				<i class="fa-regular fa-pen-to-square"></i>
+				<span>modifier</span>
+			</div>
+
+			<div class="modal" id="modal-galery">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-actions">
+							<div></div>
+							<div class="xmark">
+								<i class="fa-solid fa-xmark modal-close"></i>
+							</div>
+						</div>
+					</div>
+					<div class="modal-title">
+						<span class=".modal-title">Galerie photo</span>
+					</div>
+					<div class="modal-main">
+						<div class="edit-photo">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="button-add">
+							<span>Ajouter une photo</span>
+						</div>
+						<div class="remove-galery">
+							<span>Supprimer la galerie</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal" id="modal-add">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-actions">
+							<div class="arrow">
+								<i class="fa-solid fa-arrow-left modal-arrow"></i>
+							</div>
+							<div class="xmark">
+								<i class="fa-solid fa-xmark modal-close"></i>
+							</div>
+						</div>
+					</div>
+					<div class="modal-title">
+						<span class=".modal-title">Ajout photo</span>
+					</div>
+					<div class="modal-main">
+						<div class="photo-encart">
+							<div class="content-photo-encart">
+								<div>
+									<img src="./assets/icons/picture-svgrepo-com 1.png">
+									<div class="button-add">
+										<span id="button-add-photo"> + Ajouter photo </span>
+									</div>
+									<p>jpg, png : 4mo max</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="modal-form">
+							<form id="addPhoto_form"> 
+								<input type="file"
+										id="photo" name="image"
+										alt="add new photo"
+										accept="image/png, image/jpeg"
+										hidden>
+								
+								<div class="formulaire titre">
+									<label for="text">Titre</label>
+									<input type="text" name="title" id="text_search" required>
+								</div>
+				
+								<div class="formulaire option">
+									<label for="Categorie">Categorie</label>
+									<select name="category" id="categorie search">
+									  <option value="1">Objet</option>
+									  <option value="2">Appartement</option>
+									  <option value="3">Hôtel & restaurant</option>
+									</select>
+								</div>
+							</form>
+						</div>
+
+						
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="button-add" id="button-validation">Valider</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="categories button-rounded d-none-log">
+			<span class="active" id="all">Tous</span>
+		</div>
+		<div class="gallery">
+		</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+
+<script src="./assets/js/fetch.js"></script>
+<script src="./assets/js/testToken.js"></script>
+<script src="./assets/js/galerie.js"></script>
+<script src="./assets/js/logout.js"></script>
+<script src="./assets/js/categories.js"></script>
+<script src="./assets/js/edit.js"></script>
+<script src="./assets/js/modal.js"></script>
+</body>
+</html>
